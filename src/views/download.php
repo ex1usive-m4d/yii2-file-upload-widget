@@ -3,11 +3,9 @@
 {% for (var i=0, file; file=o.files[i]; i++) { %}
     <tr class="template-download fade">
         <td>
-            <span class="preview">
-                {% if (file.thumbnailUrl) { %}
-                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
-                {% } %}
-            </span>
+         {% if (file.deleteUrl) { %}
+         <?= "Дата добавления:" . date('d.m.Y H:i')?>
+         {% } %}
         </td>
         <td>
             <p class="name">
@@ -24,13 +22,13 @@
         <td>
             <span class="size">{%=o.formatFileSize(file.size)%}</span>
         </td>
-        <td>
+        <td style="text-align: right">
             {% if (file.deleteUrl) { %}
                 <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
                     <i class="glyphicon glyphicon-trash"></i>
                     <span><?= Yii::t('fileupload', 'Delete') ?></span>
                 </button>
-                <input type="checkbox" name="delete" value="1" class="toggle">
+
             {% } else { %}
                 <button class="btn btn-warning cancel">
                     <i class="glyphicon glyphicon-ban-circle"></i>
