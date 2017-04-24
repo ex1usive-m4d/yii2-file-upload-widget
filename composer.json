@@ -22,14 +22,5 @@
         "psr-4": {
             "dosamigos\\fileupload\\": "src"
         }
-    },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
-        },
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
     }
 }
