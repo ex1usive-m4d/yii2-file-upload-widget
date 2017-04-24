@@ -6,7 +6,6 @@
         "upload"
     ],
     "type": "yii2-extension",
-    "license": "BSD-3-Clause",
     "homepage": "https://github.com/ex1usive-m4d/yii2-file-upload-widget",
     "authors": [
         {
