@@ -19,19 +19,7 @@ $context = $this->context;
                     : Html::fileInput($context->name, $context->value, $context->fieldOptions);?>
 
             </span>
-            <a class="btn btn-primary start">
-                <i class="glyphicon glyphicon-upload"></i>
-                <span><?= Yii::t('fileupload', 'Start upload') ?></span>
-            </a>
-            <a class="btn btn-warning cancel">
-                <i class="glyphicon glyphicon-ban-circle"></i>
-                <span><?= Yii::t('fileupload', 'Cancel upload') ?></span>
-            </a>
-            <a class="btn btn-danger delete">
-                <i class="glyphicon glyphicon-trash"></i>
-                <span><?= Yii::t('fileupload', 'Delete') ?></span>
-            </a>
-            <input type="checkbox" class="toggle">
+
             <!-- The global file processing state -->
             <span class="fileupload-process"></span>
         </div>
